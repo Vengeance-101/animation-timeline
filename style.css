@@ -1,0 +1,223 @@
+*{
+    transition: all 300ms ease-in-out;
+}
+body{
+    overflow-x: hidden !important;
+}
+/* width */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(48, 48, 48);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 0, 255);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: purple;
+}
+
+
+body {
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.first-section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gradient {
+    background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(rgba(0, 0, 0, 0.349)), to(black));
+    background: -o-linear-gradient(bottom, black, rgba(0, 0, 0, 0.349), black);
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.349), black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+}
+
+.header-img {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    transform-origin: bottom;
+}
+.header-img{
+    animation: header-img linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes header-img {
+from{
+    scale: 1;
+    opacity: 1;
+}
+to{scale: 3;
+opacity: 0;}
+}
+.gradient{
+    animation: header-img linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes header-img {
+from{
+    scale: 1;
+}
+to{scale: 2;
+}
+}
+
+.hero-section {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 60%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+.hero-section p {
+    font-size: 5rem;
+    color: transparent;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    background: url("https://img.freepik.com/free-vector/violet-sundown-with-mountains-river_23-2148273708.jpg?w=740&t=st=1706785230~exp=1706785830~hmac=1b16bfb64180c75e5b79204a25009ac4583aabd1a1b889c426026564b1136a77");
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.second-section>p {
+    animation: letter linear forwards;
+    animation-timeline: view();
+    animation-range: 0px 400px;
+    transform-origin: bottom;
+}
+
+@keyframes letter {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.second-section>h1 {
+    scale: 0;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 0px 400px;
+}
+
+@keyframes fade-in {
+
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.second-section {
+    margin-bottom: 10vh;
+    min-height: 100px;
+    width: 100%;
+
+
+
+    h1,
+    p {
+        color: white;
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .img-1,
+    .img-2,
+    .img-3,
+    .img-4 {
+        height: 500px;
+        width: 800px;
+        margin-inline: auto;
+        margin-block: 20px;
+        overflow: hidden;
+
+        img {
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border: 2px solid white;
+
+        }
+    }
+
+}
+.img-1,.img-2,.img-3,.img-4{
+    animation: left-slide linear forwards;
+    animation-timeline: view();
+    scale: 0;
+    opacity: 0;
+    transform-origin: bottom;
+    animation-range: 0px 400px;
+}
+ @keyframes left-slide{
+   
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+ }
